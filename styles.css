@@ -1,0 +1,121 @@
+* {
+    font-family: 'Dancing Script', cursive;
+    text-shadow: 4px 4px 4px rgba(128, 0, 122, 0.329);
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+body {
+    background-color: rgba(42, 44, 185, 0.945);
+    display: grid;
+    place-items: center;
+    margin: 10px;
+    padding: 0px;
+    width: calc(100vw - 36px);
+    height: calc(100vh - 36px);
+    border: 8px dashed rgba(153, 31, 143, 0.911);
+    border-radius: 10px;
+}
+
+body.correct {
+    background-color: green;
+}
+
+body.incorrect {
+    background-color: red;
+}
+
+.container {
+    display: inline-block;
+    position: relative;
+    background-color: aliceblue;
+    box-shadow: 0px 0px 10px 3px black;
+    width: 750px;
+    max-width: 75%;
+    aspect-ratio: 1.75 / 1;
+    padding: 10px;
+    border-radius: 10px;
+    border: 4px solid rgba(51, 55, 241, 0.945);
+}
+
+.btn {
+    font-size: 1.25rem;
+    border-radius: 5px;
+    padding: 10px 15px;
+    background-color: rgba(105, 189, 183, 0.87);
+    border: 2px solid rgba(23, 25, 117, 0.945);
+    color: white;
+    cursor: pointer;
+}
+
+.btn.correct {
+    background-color: green;
+}
+
+.btn.incorrect {
+    background-color: red;
+}
+
+#control-container {
+    display: grid;
+    place-items: center;
+}
+
+#question {
+    font-size: 1.5rem;
+    margin: 10px 0px;
+}
+
+#answer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px 10px;
+    margin: 20px 0px;
+}
+
+#source {
+    display: inline-block;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    border-radius: 5px;
+}
+
+.ext-link {
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+a:link {
+    color: blue;
+}
+
+a:visited {
+    color: blue;
+}
+
+a:active {
+    color: red;
+}
+
+:focus-visible {
+    outline-width: 2px;
+    outline-style: solid;
+}
+
+.btn-hover:hover {
+    border: 2px solid blue;
+}
+
+.btn-hover.btn:hover {
+    color: cyan;
+}
+
+.btn-hover.ext-link:hover {
+    color: purple;
+}
+
+a.external[target="_blank"]::after {
+    content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
+    margin: 0px 3px 0px 5px;
+}
