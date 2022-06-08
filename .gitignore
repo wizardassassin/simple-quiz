@@ -103,7 +103,7 @@ dist
 # TernJS port file
 .tern-port
 
-# Vscode files
+# VS Code files
 .vscode/
 
 # Temp files
