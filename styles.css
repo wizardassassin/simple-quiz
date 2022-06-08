@@ -7,6 +7,7 @@
 
 body {
     background-color: rgba(42, 44, 185, 0.945);
+    background-image: linear-gradient(to bottom right, green, blue, red);
     display: grid;
     place-items: center;
     margin: 10px;
@@ -19,10 +20,12 @@ body {
 
 body.correct {
     background-color: green;
+    background-image: linear-gradient(to right, green, lightgreen);
 }
 
 body.incorrect {
     background-color: red;
+    background-image: linear-gradient(to right, red, pink);
 }
 
 .container {
@@ -84,6 +87,7 @@ body.incorrect {
 .ext-link {
     text-decoration: none;
     border-radius: 5px;
+    border: 2px solid aliceblue;
 }
 
 a:link {
@@ -118,4 +122,12 @@ a:active {
 a.external[target="_blank"]::after {
     content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
     margin: 0px 3px 0px 5px;
+}
+
+.hide {
+    display: none;
+}
+
+.disappear {
+    visibility: hidden;
 }
