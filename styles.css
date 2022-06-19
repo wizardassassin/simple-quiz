@@ -1,7 +1,8 @@
-* {
+body,
+button {
     font-family: 'Dancing Script', cursive;
     text-shadow: 4px 4px 4px rgba(128, 0, 122, 0.329);
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: bold;
 }
 
@@ -36,44 +37,69 @@ body.incorrect {
     width: 750px;
     max-width: 75%;
     aspect-ratio: 1.75 / 1;
-    padding: 10px;
+    padding: 20px;
     border-radius: 10px;
     border: 4px solid rgba(51, 55, 241, 0.945);
 }
 
 .btn {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     border-radius: 5px;
-    padding: 10px 15px;
-    background-color: rgba(105, 189, 183, 0.87);
+    padding: 10px 20px;
+    /* background-color: rgba(105, 189, 183, 0.87); */
     border: 2px solid rgba(23, 25, 117, 0.945);
     color: white;
     cursor: pointer;
 }
 
-.btn.correct {
+#question-container .btn.correct {
     background-color: green;
 }
 
-.btn.incorrect {
+#question-container .btn.incorrect {
     background-color: red;
 }
 
+#question-container .btn {
+    background-color: rgba(105, 189, 183, 0.87);
+}
+
+#control-container .btn {
+    background-color: rgba(117, 108, 199, 0.87);
+    background-image: linear-gradient(to bottom left, rgb(0, 0, 255), rgb(100, 100, 255), rgb(0, 0, 255));
+}
+
 #control-container {
-    display: grid;
-    place-items: center;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px 0px 0px;
+}
+
+#control-container>.btn {
+    font-size: 1.75rem;
+}
+
+#question-container {
+    margin: 0px 0px 10px;
+}
+
+#question-container[class="hide"]+#control-container {
+    position: relative;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 #question {
-    font-size: 1.5rem;
-    margin: 10px 0px;
+    font-size: 1.75rem;
+    margin: 0px 0px 10px;
 }
 
-#answer {
+#answers {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px 10px;
-    margin: 20px 0px;
+    margin: 10px 0px;
 }
 
 #source {
@@ -84,10 +110,29 @@ body.incorrect {
     border-radius: 5px;
 }
 
+#score {
+    margin: 10px 0px;
+    text-align: center;
+}
+
+/* .content {
+    display: grid;
+    place-items: center;
+    grid-template-columns: auto 22px;
+}
+
+svg {
+    width: 22px;
+} */
+
 .ext-link {
     text-decoration: none;
     border-radius: 5px;
     border: 2px solid aliceblue;
+}
+
+img.ext-link {
+    width: 15px;
 }
 
 a:link {
@@ -117,11 +162,6 @@ a:active {
 
 .btn-hover.ext-link:hover {
     color: purple;
-}
-
-a.external[target="_blank"]::after {
-    content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
-    margin: 0px 3px 0px 5px;
 }
 
 .hide {
