@@ -5,35 +5,44 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
+    <script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script defer id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
     <script defer src="main.js"></script>
     <title>Simple Quiz</title>
 </head>
 
 <body>
     <div class="container">
-        <div id="question-container">
-            <div id="question">Question</div>
-            <div id="answer">
+        <div id="question-container" class="">
+            <div id="question">0. Question</div>
+            <div id="answers">
                 <button class="btn btn-hover">Answer 1</button>
                 <button class="btn btn-hover">Answer 2</button>
                 <button class="btn btn-hover">Answer 3</button>
                 <button class="btn btn-hover">Answer 4</button>
             </div>
         </div>
+        <div id="score">Score: 0/0 (N/A%)</div>
         <div id="control-container">
-            <button class="start-btn btn btn-hover">Start</button>
-            <button class="next-btn btn btn-hover">Next</button>
-            <button class="import-btn btn btn-hover">Import</button>
-            <button class="create-btn btn btn-hover">Create</button>
+            <button id="start-btn" class="start-btn btn btn-hover">Start</button>
+            <button id="config-btn" class="config-btn btn btn-hover">Config</button>
+            <button id="next-btn" class="next-btn btn btn-hover hide">Next</button>
+            <button id="reset-btn" class="reset-btn btn btn-hover hide">Reset</button>
+            <button id="import-btn" class="import-btn btn btn-hover">Import</button>
+            <button id="create-btn" class="create-btn btn btn-hover">Create</button>
         </div>
         <div id="source">
             <a href="https://github.com/wizardassassin/simple-quiz" target="_blank" rel="noopener noreferrer"
-                class="external ext-link btn-hover">Source</a>
+                class="external ext-link btn-hover">Source <img src="images/arrow-up-right-from-square-solid.svg"
+                    alt="External Link Icon." class="ext-link"></a>
         </div>
+        <p></p>
     </div>
 </body>
 
